@@ -332,7 +332,7 @@ footer {
     & .social-medias {
         display: flex;
         justify-content: center;
-        gap: 25px;
+        gap: 30px;
         padding-top: 130px;
     }
 }
