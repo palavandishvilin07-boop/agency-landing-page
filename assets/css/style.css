@@ -1,0 +1,219 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --header-text-color: rgb(255, 255, 255);
+    --primary-color: rgb(0, 0, 0);
+    --secondary-color: rgb(119, 119, 119);
+}
+
+body {
+    font-family: arial, sans-serif;
+}
+
+header {
+    height: 100vh;
+    background-image: url(../images/desktop/image-header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    & h1 {
+        font-size: 65px;
+        color: var(--header-text-color);
+        font-family: none;
+        letter-spacing: 5px;
+        position: absolute;
+        top: 20%;
+        left: 27%;
+    }
+    & .arrow-down {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+    }
+    & nav {
+        position: absolute;
+        top: 7%;
+        left: 5%;
+        & img {
+            width: 180px;
+        }
+        display: flex;
+        gap: 750px;
+        & ul {
+            list-style-type: none;
+            gap: 60px;
+            display: flex;
+
+            & .contact-button {
+                border: none;
+                border-radius: 50px;
+                padding: 17px;
+                background-color: var(--header-text-color);
+                color: var(--primary-color);
+            }
+            & a {
+                font-size: 18px;
+                color: var(--header-text-color);
+                text-decoration: none;
+
+            }
+        }
+    }
+}
+
+li:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+main {
+    & .cards1-wrapper {
+        display: flex;
+        .card1 {
+            width: 760px;
+            height: 600px;
+            border: none;
+            & h2 {
+                margin-top: 100px;
+                margin-left: 150px;
+                font-family: none;
+                font-size: 50px;
+                max-width: 50%;
+            }
+            & p {
+                margin-left: 150px;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                font-size: 17px;
+                max-width: 60%;
+                line-height: 25px;
+                color: var(--secondary-color);
+            }
+            & button {
+                cursor: pointer;
+                margin-left: 170px;
+                background-color: var(--header-text-color);
+                font-family: none;
+                border: none;
+                font-size: 18px;
+                border-bottom: 6px solid gold;
+                
+            }
+        }
+        & .card2 {
+            height: 600px;
+            & img {
+                width: 763px;
+                height: 600px;
+            }
+        }
+    }
+    & .cards2-wrapper {
+        display: flex;
+        & .card1 {
+            height: 600px;
+            & img {
+               width: 750px;
+               height: 600px;
+            }
+        }
+        & .card2 {
+            & h2 {
+                margin-top: 100px;
+                margin-left: 150px;
+                font-family: none;
+                font-size: 50px;
+                max-width: 70%;
+            }
+            & p {
+                margin-top: 40px;
+                margin-left: 150px;
+                max-width: 54%;
+                color: var(--secondary-color);
+            }
+            & button {
+                margin-left: 170px;
+                margin-top: 40px;
+                background-color: var(--header-text-color);
+                border: none;
+                font-family: none;
+                font-size: 18px;
+                border-bottom: 6px solid rgb(213, 201, 186);
+            }
+        }
+    }
+    & .cards3-wrapper {
+        display: flex;
+        text-transform: capitalize;
+        & .card1 {
+            & img {
+                width: 750px;
+                height: 600px;
+            }
+            & h3 {
+                font-size: 35px;
+                position: absolute;
+                top: 290%;
+                left: 15%;
+                color: #327a60;
+                font-family: none;
+            }
+            & p {
+                text-transform: none;
+                color: var(--secondary-color);
+                max-width: 25%;
+                position: absolute;
+                top: 300%;
+                left: 11.5%;
+                text-align: center;
+                line-height: 1.5;
+            }
+        }
+        & .card2 {
+            & img {
+                width: 750px;
+                height: 600px;
+            }
+            & h3 {
+                color: #11476b;
+                font-size: 35px;
+                font-family: none;
+                position: absolute;
+                top: 290%;
+                left: 68%;
+            }
+            & p {
+                text-align: center;
+                max-width: 25%;
+                position: absolute;
+                top: 300%;
+                left: 62%;
+                color: #11476b;
+            }
+        }
+    }
+}
+.title {
+    display: flex;
+    justify-content: center;
+    color: var(--secondary-color);
+    letter-spacing: 5px;
+    font-family: none;
+    font-size: 18px;
+    margin-top: 150px;
+}
+.client1 {
+    & img {
+        margin-left: 100px;
+        width: 85px;
+        height: 85px;
+        border-radius: 50%;
+    }
+    & h4 {
+        color: var(--secondary-color);
+        text-align: center;
+        max-width: 30%;
+    }
+}
