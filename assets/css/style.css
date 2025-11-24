@@ -42,7 +42,7 @@ header {
         }
         display: flex;
         gap: 750px;
-        & ul {
+        & .desktop-ul {
             list-style-type: none;
             gap: 60px;
             display: flex;
@@ -62,9 +62,53 @@ header {
             }
         }
     }
-}
+    & .burger-menu {
+        display: none;
+        align-items: flex-end;
+        flex-direction: column;
+        cursor: pointer;
+        margin-right: 80px;
+        padding-top: 50px;
+        & .line {
+            width: 20px;
+            height: 3px;
+            background-color: var(--header-text-color);
+            margin-bottom: 5px;
 
-li:hover {
+        }
+    }
+    .tablet-menu {
+        & button {
+            height: fit-content;
+            width: 20px;
+            position: relative;
+            left: 35%;
+            background-color: red;
+        }
+        display: none;
+        position: absolute;
+        left: 85%;
+        top: 11%;
+        background-color: var(--header-text-color);
+        border: 1px solid black;
+        width: 80px;
+        height: 100px;
+        z-index: 1000;
+        & .tablet-ul {
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+            & .tablet-li {
+                list-style-type: none;
+                & a {
+                    color: var(--primary-color);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+.desktop-li:hover {
     transform: scale(1.1);
     transition: 0.3s;
 }
@@ -334,5 +378,164 @@ footer {
         justify-content: center;
         gap: 30px;
         padding-top: 130px;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 1024px) {
+
+    header {
+        background-position: center;
+        & .tablet-menu {
+            display: none;
+        }
+    }
+
+    header {
+        & h1 {
+            font-size: 50px;
+        }
+        & .burger-menu {
+            display: flex !important;
+        }
+        & nav {
+            & ul {
+                display: none !important;
+            }
+        }
+
+    }
+    header .arrow-down {
+        top: 35% !important;
+    }
+
+    .cards1-wrapper {
+        flex-direction: column;
+    }
+    .cards1-wrapper {
+        & .card1 {
+            height: 400px !important;
+            width: 100% !important;
+        }
+        & .card2 {
+            height: 500px !important;
+            & img {
+                height: 550px !important;
+                width: 100% !important;
+            }
+        }
+    }
+
+    .cards1-wrapper .card1 h2,
+    .cards1-wrapper .card1 p,
+    .cards1-wrapper .card1 button {
+        margin-left: 40px !important;
+        max-width: 85% !important;
+    }
+
+    .cards2-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .cards2-wrapper .card2 h2,
+    .cards2-wrapper .card2 p,
+    .cards2-wrapper .card2 button {
+        margin-left: 40px !important;
+        max-width: 85% !important;
+    }
+    .cards2-wrapper {
+        & .card1 {
+            height: 20px;
+        }
+    }
+    .cards2-wrapper .card1 img,
+    .cards2-wrapper .card2 {
+        width: 100% !important;
+    }
+
+    .cards3-wrapper {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .cards3-wrapper .card1 img,
+    .cards3-wrapper .card2 img {
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    .cards3-wrapper .card1 h3,
+    .cards3-wrapper .card2 h3 {
+        position: static !important;
+        margin-top: -140px;
+        text-align: center;
+    }
+    .cards3-wrapper {
+        & .card1 {
+            height: 559px;
+        }
+    }
+    .cards3-wrapper .card1 p,
+    .cards3-wrapper .card2 p {
+        position: static !important;
+        max-width: 80% !important;
+        text-align: center;
+        margin: 0 auto 100px auto;
+    }
+
+    .title {
+        margin-top: 100px !important;
+    }
+
+    .clients {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .clients img {
+        margin-left: 0 !important;
+    }
+
+    .clients strong,
+    .clients h4 {
+        margin-left: 0 !important;
+    }
+
+    .clients .emily,
+    .clients .thomas,
+    .clients .jennie {
+        margin-bottom: 80px;
+    }
+
+    .photos {
+        flex-wrap: wrap;
+    }
+
+    .photos img {
+        width: 50% !important;
+        height: auto !important;
+    }
+
+    footer {
+        height: auto;
+        padding-bottom: 60px;
+    }
+
+    footer strong {
+        padding-top: 40px;
+    }
+
+    footer nav ul {
+        gap: 40px;
+    }
+
+    footer .social-medias {
+        padding-top: 60px;
+        padding-bottom: 40px;
     }
 }
